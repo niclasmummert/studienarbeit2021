@@ -1,0 +1,57 @@
+trigger:
+- master
+- releases/*
+
+schedules:
+- cron: "0 12 * * 0" # mm HH DD MM DW
+  displayName: Weekly Sunday build
+  branches:
+    include:
+    - main
+  always: false  # running only when there a code changes
+
+jobs:
+- job: 'Test'
+  pool:
+    vmImage: 'vs2017-win2016' # other options: 'macOS-10.14', 'vs2017-win2016'
+  strategy:
+    matrix:
+      Python27:
+        python.version: '2.7'
+      Python35:
+        python.version: '3.5'
+      Python36:
+        python.version: '3.6'
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '$(python.version)' # use multiple python versions
+  
+  - script: python -m pip install --upgrade pip
+    displayName: 'Install dependencies' # installation of dependencies
+  - script: pip install -r requirements.txt
+    displayName: 'Install requirements' # installation of requirements
+
+  - script: |
+      python -m pip install flake8
+      flake8 .
+    displayName: 'Run lint tests' # running some lint test
+
+  - script: |
+      coverage run -m unittest discover
+      coverage report -m
+      coverage html
+      coverage xml
+    displayName: 'Test with unittest Framework and generate code coverage metrics in html and xml' # run tests
+
+  - task: PublishTestResults@2
+    condition: succeededOrFailed()
+    inputs:
+      testResultsFiles: '**/xml_report/*.xml'
+      testRunTitle: 'Publish test results for Python $(python.version)' # add Publish test result task to publish JUnit or xUnit test result to the server
+
+  - task: PublishCodeCoverageResults@1
+    inputs:
+      summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
+      reportDirectory: '$(System.DefaultWorkingDirectory)/**/htmlcov' # add Publish code coverage result task to publish code coverage results to the server. You can see coverage metrics in the build summary, and download HTML reports for further analysis
+      
