@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="TestImportVersions-20210225212546" tests="9" time="0.001">
+	<testcase classname="TestImportVersions" name="test_PIL_pos" time="0.000"/>
+	<testcase classname="TestImportVersions" name="test_Pandas_pos" time="0.000"/>
+	<testcase classname="TestImportVersions" name="test_csv_pos" time="0.000"/>
+	<testcase classname="TestImportVersions" name="test_json_pos" time="0.000"/>
+	<testcase classname="TestImportVersions" name="test_numpy_pos" time="0.000"/>
+	<testcase classname="TestImportVersions" name="test_requests_pos" time="0.000"/>
+	<testcase classname="TestImportVersions" name="test_sklearn_pos" time="0.001"/>
+	<testcase classname="TestImportVersions" name="test_torch_pos" time="0.000"/>
+	<testcase classname="TestImportVersions" name="test_torchvision_pos" time="0.000"/>
+	<system-out>
+<![CDATA[Using knn_model
+Analysed Output Comfort
+Creating user_model
+Analysed Output Comfort
+Using user_model
+Analysed Output Comfort
+{"label": "tarmac", "probability": "0.99938273"}
+{"label": "tarmac", "probability": "0.9285313"}
+]]>	</system-out>
+	<system-err>
+<![CDATA[C:\Users\nicla\Anaconda3\lib\site-packages\sklearn\externals\joblib\numpy_pickle.py:104: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  pickler.file_handle.write(chunk.tostring('C'))
+C:\Users\nicla\Anaconda3\lib\site-packages\sklearn\externals\joblib\numpy_pickle.py:104: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  pickler.file_handle.write(chunk.tostring('C'))
+C:\Users\nicla\Anaconda3\lib\site-packages\sklearn\externals\joblib\numpy_pickle.py:104: DeprecationWarning: tostring() is deprecated. Use tobytes() instead.
+  pickler.file_handle.write(chunk.tostring('C'))
+ml_module.py:23: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  image = tensor(image)
+ml_module.py:23: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  image = tensor(image)
+ml_module.py:23: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  image = tensor(image)
+ml_module.py:23: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  image = tensor(image)
+]]>	</system-err>
+</testsuite>
