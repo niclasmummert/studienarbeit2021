@@ -1,0 +1,25 @@
+torchvision == 0.5.0
+torch == 1.7.1+cpu
+requests == 2.22.0
+sklearn == 0.20.3
+pandas == 0.23.4
+numpy == 1.19.5
+pillow == 6.2.2
+json == 2.0.9
+pip == 20.0.0
+csv == 1.0
+html-testRunner
+PySimpleGui
+xmlrunner
+importlib
+pysqlite3
+coverage
+unittest
+openpyxl
+base64
+random
+nose2
+Image
+sys
+io
+os
