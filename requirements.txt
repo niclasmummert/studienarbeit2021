@@ -1,7 +1,7 @@
 torchvision == 0.5.0
 torch == 1.7.1
 requests == 2.22.0
-sklearn == 0.20.3
+sklearn
 pandas == 0.23.4
 numpy == 1.19.5
 pillow == 6.2.2
