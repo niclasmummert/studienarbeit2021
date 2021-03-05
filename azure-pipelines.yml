@@ -1,6 +1,5 @@
 trigger:
 - master
-- releases/*
 
 schedules:
 - cron: "0 12 * * 0" # mm HH DD MM DW
