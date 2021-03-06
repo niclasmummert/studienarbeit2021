@@ -5,9 +5,7 @@ sklearn
 pandas == 0.23.4
 numpy == 1.19.5
 pillow == 6.2.2
-json
 pip == 20.0.0
-csv
 html-testRunner
 PySimpleGui
 xmlrunner
