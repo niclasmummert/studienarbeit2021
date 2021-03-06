@@ -9,7 +9,6 @@ pip == 20.0.0
 html-testRunner
 PySimpleGui
 xmlrunner
-importlib
 pysqlite3
 coverage
 unittest
@@ -18,6 +17,3 @@ base64
 random
 nose2
 Image
-sys
-io
-os
