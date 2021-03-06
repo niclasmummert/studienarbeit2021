@@ -11,9 +11,6 @@ PySimpleGui
 xmlrunner
 pysqlite3
 coverage
-unittest
 openpyxl
-base64
-random
 nose2
 Image
