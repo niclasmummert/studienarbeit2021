@@ -54,4 +54,3 @@ jobs:
       codeCoverageTool: "cobertura"
       summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
       reportDirectory: '$(System.DefaultWorkingDirectory)/**/htmlcov' # add Publish code coverage result task to publish code coverage results to the server. You can see coverage metrics in the build summary, and download HTML reports for further analysis
-      
