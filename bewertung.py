@@ -10,107 +10,107 @@ def convFalseTrue(value):
 
 def maptoexcel(values):
     mywb = load_workbook("AuswertungBefragung.xlsx")
-    mysheet = mywb["Test"]
+    mysheet = mywb["A0-1"]
     value = convFalseTrue(values[15])
-    mysheet["C4"] = value
+    mysheet["C3"] = value
     value = convFalseTrue(values[14])
-    mysheet["D4"] = value
+    mysheet["D3"] = value
     value = convFalseTrue(values[13])
-    mysheet["E4"] = value
+    mysheet["E3"] = value
     value = convFalseTrue(values[12])
-    mysheet["F4"] = value
+    mysheet["F3"] = value
     value = convFalseTrue(values[11])
-    mysheet["G4"] = value
+    mysheet["G3"] = value
     value = convFalseTrue(values[25])
-    mysheet["C5"] = value
+    mysheet["C4"] = value
     value = convFalseTrue(values[24])
-    mysheet["D5"] = value
+    mysheet["D4"] = value
     value = convFalseTrue(values[23])
-    mysheet["E5"] = value
+    mysheet["E4"] = value
     value = convFalseTrue(values[22])
-    mysheet["F5"] = value
+    mysheet["F4"] = value
     value = convFalseTrue(values[21])
-    mysheet["G5"] = value
+    mysheet["G4"] = value
     value = convFalseTrue(values[35])
-    mysheet["C6"] = value
+    mysheet["C5"] = value
     value = convFalseTrue(values[34])
-    mysheet["D6"] = value
+    mysheet["D5"] = value
     value = convFalseTrue(values[33])
-    mysheet["E6"] = value
+    mysheet["E5"] = value
     value = convFalseTrue(values[32])
-    mysheet["F6"] = value
+    mysheet["F5"] = value
     value = convFalseTrue(values[31])
-    mysheet["G6"] = value
+    mysheet["G5"] = value
     value = convFalseTrue(values[45])
-    mysheet["C7"] = value
+    mysheet["C6"] = value
     value = convFalseTrue(values[44])
-    mysheet["D7"] = value
+    mysheet["D6"] = value
     value = convFalseTrue(values[43])
-    mysheet["E7"] = value
+    mysheet["E6"] = value
     value = convFalseTrue(values[42])
-    mysheet["F7"] = value
+    mysheet["F6"] = value
     value = convFalseTrue(values[41])
-    mysheet["G7"] = value
+    mysheet["G6"] = value
     value = convFalseTrue(values[55])
-    mysheet["C8"] = value
+    mysheet["C7"] = value
     value = convFalseTrue(values[54])
-    mysheet["D8"] = value
+    mysheet["D7"] = value
     value = convFalseTrue(values[53])
-    mysheet["E8"] = value
+    mysheet["E7"] = value
     value = convFalseTrue(values[52])
-    mysheet["F8"] = value
+    mysheet["F7"] = value
     value = convFalseTrue(values[51])
-    mysheet["G8"] = value
+    mysheet["G7"] = value
     value = convFalseTrue(values[65])
-    mysheet["C9"] = value
+    mysheet["C8"] = value
     value = convFalseTrue(values[64])
-    mysheet["D9"] = value
+    mysheet["D8"] = value
     value = convFalseTrue(values[63])
-    mysheet["E9"] = value
+    mysheet["E8"] = value
     value = convFalseTrue(values[62])
-    mysheet["F9"] = value
+    mysheet["F8"] = value
     value = convFalseTrue(values[61])
-    mysheet["G9"] = value
+    mysheet["G8"] = value
     value = convFalseTrue(values[75])
-    mysheet["C10"] = value
+    mysheet["C9"] = value
     value = convFalseTrue(values[74])
-    mysheet["D10"] = value
+    mysheet["D9"] = value
     value = convFalseTrue(values[73])
-    mysheet["E10"] = value
+    mysheet["E9"] = value
     value = convFalseTrue(values[72])
-    mysheet["F10"] = value
+    mysheet["F9"] = value
     value = convFalseTrue(values[71])
-    mysheet["G10"] = value
+    mysheet["G9"] = value
     value = convFalseTrue(values[85])
-    mysheet["C11"] = value
+    mysheet["C10"] = value
     value = convFalseTrue(values[84])
-    mysheet["D11"] = value
+    mysheet["D10"] = value
     value = convFalseTrue(values[83])
-    mysheet["E11"] = value
+    mysheet["E10"] = value
     value = convFalseTrue(values[82])
-    mysheet["F11"] = value
+    mysheet["F10"] = value
     value = convFalseTrue(values[81])
-    mysheet["G11"] = value
+    mysheet["G10"] = value
     value = convFalseTrue(values[95])
-    mysheet["C12"] = value
+    mysheet["C11"] = value
     value = convFalseTrue(values[94])
-    mysheet["D12"] = value
+    mysheet["D11"] = value
     value = convFalseTrue(values[93])
-    mysheet["E12"] = value
+    mysheet["E11"] = value
     value = convFalseTrue(values[92])
-    mysheet["F12"] = value
+    mysheet["F11"] = value
     value = convFalseTrue(values[91])
-    mysheet["G12"] = value
+    mysheet["G11"] = value
     value = convFalseTrue(values[105])
-    mysheet["C13"] = value
+    mysheet["C12"] = value
     value = convFalseTrue(values[104])
-    mysheet["D13"] = value
+    mysheet["D12"] = value
     value = convFalseTrue(values[103])
-    mysheet["E13"] = value
+    mysheet["E12"] = value
     value = convFalseTrue(values[102])
-    mysheet["F13"] = value
+    mysheet["F12"] = value
     value = convFalseTrue(values[101])
-    mysheet["G13"] = value
+    mysheet["G12"] = value
     mywb.save("AuswertungBefragung.xlsx")
 
 def open_window():
@@ -133,9 +133,11 @@ def open_window():
     while True:
         event, values = window.read()
 
-        if event == chr(13) or event == "OK" or event == "Exit" or event == sg.WIN_CLOSED:
+        if event == chr(13) or event == "OK":
             maptoexcel(values)
             break
+        if event == "Exit" or event == sg.WIN_CLOSED:
+            break 
 
     window.close()
     return window
