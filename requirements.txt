@@ -13,4 +13,3 @@ pysqlite3
 coverage
 openpyxl
 nose2
-Image
