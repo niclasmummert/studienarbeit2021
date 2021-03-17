@@ -114,7 +114,7 @@ def maptoexcel(values):
     mywb.save("AuswertungBefragung.xlsx")
 
 def open_window():
-    layout = [[sg.Text("Bewerte folgende Aussagen...", size=(101,1)), sg.Text("Stimme zu", size=(23,1)), sg.Text("Stimme gar nicht zu")],
+    layout = [[sg.Text("Bewerte folgende Aussagen...", size=(101,1)), sg.Text("Stimme gar nicht zu", size=(23,1)), sg.Text("Stimme zu")],
         [sg.Text('_'  * 100)],
         [sg.Text("Ich glaube, dass ich das interaktive System regelmäßig nutzen werde", size=(105,1)), sg.Radio(text="", group_id=1, default=False, size=(2,1), key=15, enable_events=True), sg.Radio(text="", group_id=1, default=False, size=(2,1), key=14, enable_events=True), sg.Radio(text="", group_id=1, default=True, size=(2,1), key=13, enable_events=True), sg.Radio(text="", group_id=1, default=False, size=(2,1), key=12, enable_events=True), sg.Radio(text="", group_id=1, default=False, size=(2,1), key=11, enable_events=True)],  
         [sg.Text("Ich finde das interaktive System ziemlich komplex", size=(105,1)), sg.Radio(text="", group_id=2, default=False, size=(2,1), key=25, enable_events=True), sg.Radio(text="", group_id=2, default=False, size=(2,1), key=24, enable_events=True), sg.Radio(text="", group_id=2, default=True, size=(2,1), key=23, enable_events=True), sg.Radio(text="", group_id=2, default=False, size=(2,1), key=22, enable_events=True), sg.Radio(text="", group_id=2, default=False, size=(2,1), key=21, enable_events=True)],
