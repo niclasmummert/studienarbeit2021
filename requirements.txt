@@ -11,4 +11,5 @@ PySimpleGui
 xmlrunner
 pysqlite3
 coverage
-openpyxl
+nose2
+//openpyxl
