@@ -11,4 +11,3 @@ PySimpleGui
 xmlrunner
 pysqlite3
 coverage
-nose2
